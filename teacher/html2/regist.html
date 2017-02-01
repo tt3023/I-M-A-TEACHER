@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link rel="stylesheet" 　type="text/css" href="../css2/forgetPass.css">
+<form action="/forgetPassword">
+    <div class="back">
+        <div class="up">
+            <div>
+                <a href="login.html">＜返回</a>
+            </div>
+            <br><br>
+            <div style="box-shadow: 0 0 1px #000;width: 370px">
+                手机号:<input class="inp" type="text">
+            </div>
+        </div>
+
+        <div class="up" id="next2" style="display: none" >
+            <div >
+                我们已发送验证码到您的手机，请注意查收
+            </div>
+            <div style="box-shadow: 0 0 1px #000;width: 370px">
+                验证码:<input class="inp" type="text" style="width: 181px" 　>
+                　　　<input type="button" value="重新发送" style="border: 0;background-color: white;">
+            </div>
+            <br>
+            <input  class="but" style="margin: 0" type="submit" value="下一步">
+        </div>
+        <div id="next1">
+            <input class="but" type="button" value="下一步"  onclick="hidden1()">
+        </div>
+    </div>
+</form>
+<script type="text/javascript" >
+    function hidden1() {
+        var a = document.getElementById("next1");
+        var b = document.getElementById("next2");
+        a.style.display = "none";
+        b.style.display = "block";
+    }
+</script>
+</body>
+</html>
