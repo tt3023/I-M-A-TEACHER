@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频录制</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css1/bootstrap-theme.css"/>
+<link rel="stylesheet" type="text/css" href="../css1/bootstrap.css"/>
+<script >
+    function fun1() {
+        alert("视屏即将开始录制！请保持安静！");
+    }
+    function fun2() {
+        alert("视频录制已经暂停，别忘记恢复！");
+    }
+    function fun3() {
+        alert("视频已经取消录制，即将开始重新录制！");
+    }
+    function fun4() {
+        window.location.href="uploadfile.html"
+    }
+</script>
+<style type="text/css">
+    .one{
+        height: 700px;
+        border: black 1px solid;
+    }
+    .two{
+        height:640px;
+        padding: 10px;
+        margin: 27px;
+        border: red 1px solid;
+        background-color: #2f3238;
+        margin-top: 5px;
+    }
+    .demo{
+
+        font-family: 文泉驿等宽微米黑;
+        font-size: medium;
+        margin-top: 21px;
+    }
+    .lii{
+        list-style: none;
+        float: left;
+        margin: 20px;
+    }
+    .three{
+        position: relative;
+        height: 60px;
+        width: 500px;
+        top: 400px;
+        left: 650px;
+
+    }
+    img{
+        width:50px;
+        height:50px;
+    }
+    .four{
+        position: relative;
+        left: 850px;
+        top:200px;
+    }
+    .five{
+        width:100px;
+        height:100px;
+    }
+    .i{
+        height: 300px;
+        width: 910px;
+        border: black 1px solid;
+    }
+    .p{
+        float: left;;
+    }
+    .j{
+        margin: 5px;
+    }
+
+</style>
+<body>
+<div class="one">
+    <div class="demo" align="center">视频录制</div>
+    <div class="two">
+        <div>
+            <img src="../image1/2.png">
+        </div>
+        <div class="four"><img src="../image1/3.png" class="five"></div>
+        <div class="three">
+            <ul>
+                <li class="lii"><button id="t1" onclick="fun1()" class="bg-primary">开始</button></li>
+                <li class="lii"><button id="t2" onclick="fun2()" class="bg-primary">暂停</button></li>
+                <li class="lii"><button id="t3" onclick="fun3()" class="btn-danger">复位</button></li>
+                <li class="lii"><button id="t4" onclick="fun4()" class="bg-success">上传</button></li>
+                <li class="lii">
+                    <select class="btn-group-sm">
+                        <option>标清</option>
+                        <option>高清</option>
+                        <option>超清</option>
+                        <option>蓝光</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div>
+    <ul>
+        <li style="list-style-type: none" class="p">
+            <div class="i">
+                <ul>
+                    <h6 align="center">教室信息</h6>
+                    <li style="list-style-type: none" class="j"><input type="text" name="roomname" value="教室名字：java之家" class="form-control" disabled/></li>
+                    <li style="list-style-type: none" class="j"><input type="text" name="roomname" value=“创建时间：xxxx-xx-xx" class="form-control" disabled/></li>
+                    <li style="list-style-type: none" class="j"><input type="text" name="roomname" value="所属人ID：xxxx" class="form-control" disabled/></li>
+                    <li style="list-style-type: none" class="j"><input type="text" name="roomname" value="教室类型：xxxx" class="form-control" disabled/></li>
+                    <li style="list-style-type: none" class="j"><input type="text" name="roomname" value="教室ID：xxxx" class="form-control" disabled/></li>
+                    <li style="list-style-type: none" class="j"><textarea type="text" rows="3" style="width: 300px" disabled>教室简介:xxxxxxxxxxxxx</textarea></li>
+                </ul>
+            </div>
+        </li>
+        <li style="list-style-type: none" class="p">
+            <div class="i">
+                <ul>
+                    <h6 align="center">录制课程信息</h6>
+                    <li style="list-style-type: none" class="j"><input type="text" name="roomname" value="课程名字：java" class="form-control" disabled/></li>
+                    <li style="list-style-type: none" class="j"><input type="text" name="roomname" value="录制时间：xxxx-xx-xx" class="form-control" disabled/></li>
+                    <li style="list-style-type: none" class="j"><input type="text" name="roomname" value="录制人ID：xxxx" class="form-control" disabled/></li>
+                    <li style="list-style-type: none" class="j"><textarea type="text" rows="7" style="width: 300px" disabled>课程简介:xxxxxxxxxxxxx</textarea></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

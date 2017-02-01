@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完善教室信息</title>
+</head>
+<link rel="stylesheet" href="../css1/bootstrap-theme.css">
+<link rel="stylesheet" href="../css1/bootstrap.css">
+<body>
+<form action="" method="post" id="sss">
+    <div style="border: black 1px solid" class="demo">
+        <h1 align="center"></h1>
+        <div class="form-group">
+            <label>教室ID</label>
+            <input type="text" name="roomid" class="form-control" placeholder="系统自动填写，用户不需要填写" disabled>
+        </div>
+        <div class="form-group">
+            <label>创建时间</label>
+            <input type="text" name="time" class="form-control" placeholder="系统自动填写，用户不需要填写" disabled>
+        </div>
+        <div class="form-group">
+            <label>教室的所有者</label>
+            <input type="text" name="hoster" class="form-control" placeholder="系统自动填写，用户不需要填写" disabled>
+        </div>
+        <div class="form-group">
+            <label>教室的类型</label>
+            <input type="text" name="type" class="form-control" placeholder="请填写教室的类型"/>
+        </div>
+        <div class="form-group">
+            <label>教室的名字</label>
+            <input type="text" name="roomname" class="form-control" placeholder="用户填写教室的名字">
+        </div>
+
+        <div class="form-group">
+            <label>教室图片</label>
+            <input type="file" name="classphoto" class="form-control" placeholder="请输入图片途径" oninput="BrowseFolder()"/>
+        </div>
+        <div>
+            <div class="form-group">
+                <label>教室简介</label>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+        </textarea>
+        </div>
+        <div >
+            <input type="button" name="submit" value="确认" class="bg-success alert-info" onclick="func()"/>
+        </div>
+    </div>
+</form>
+</body>
+<script>
+    function BrowseFolder(){
+        try{
+            var Message = "请选择文件夹"; //选择框提示信息
+            var Shell = new ActiveXObject( "Shell.Application" );
+            var Folder = Shell.BrowseForFolder(0,Message,0x0040,0x11);//起始目录为：我的电脑
+            //var Folder = Shell.BrowseForFolder(0,Message,0); //起始目录为：桌面
+            if(Folder != null){
+                Folder = Folder.items(); // 返回 FolderItems 对象
+                Folder = Folder.item(); // 返回 Folderitem 对象
+                Folder = Folder.Path; // 返回路径
+                if(Folder.charAt(Folder.length-1) != "\\"){
+                    Folder = Folder + "\\";
+                }
+                document.all.savePath.value=Folder;
+                return Folder;
+            }
+        }catch(e){
+            //alert(e.message);
+        }
+    }
+
+    function  func() {
+        window.location.href="classlist.html"
+    }
+
+</script>
+</html>
