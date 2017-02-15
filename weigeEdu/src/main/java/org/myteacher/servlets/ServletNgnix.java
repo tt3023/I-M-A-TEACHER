@@ -37,7 +37,7 @@ public class ServletNgnix extends HttpServlet {
         br.close();
 
         //准备请求的url
-        String url = Params.NETTY_ADDRESS;
+        String url = Params.NETTY_ADDRESSADDPORT;
         String encoding = Params.JSON_ENCODING;
 
         Log.debug("url "+url+"encoding "+encoding);
