@@ -1,0 +1,39 @@
+.back {
+    margin: auto;
+    width: 420px;
+    height: 350px;
+    box-shadow: 0 0 3px #000;
+}
+
+.to {
+    margin-top: 10%;
+    margin-left: 36%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.inp {
+    width: 346px;
+    margin-left: 25px;
+}
+
+.but {
+    border-radius: 5%;
+    background-color: #3baeed;
+    color: white;
+    width: 362px;
+    height: 35px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.foo {
+    width: 366px;
+    margin-left: 25px;
+}
+
+.foo a {
+    color: #3baeed;
+    text-decoration: none;
+}

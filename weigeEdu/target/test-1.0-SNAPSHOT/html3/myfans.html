@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../code/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../code/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function getjsonlength( jsondata) {
+            var length=0
+            for (var  i in jsondata){
+                length++;
+
+            }
+            return length;
+        }
+        $(document).ready(function () {
+            var req = JSON.stringify({
+                "data":
+                {
+                    "passwd":"",
+                    "constellation":"",
+                    "phone":"",
+                    "sex":"",
+                    "birth":"",
+                    "uname":"",
+                    "hobby":"",
+                    "photo":"",
+                    "packet":"",
+                    "signature":""
+
+                },
+
+                "flag":
+                        "myfans"
+            });
+            $.ajax({
+                data:req,
+                type: "POST",
+                url: "/login",
+                dataType: "html",
+                success: function (msg) {
+                    if (msg =="") {
+                        $("#phone").html("");
+                        $("#phone").html("亲，点我刷新下吧！");
+                    }
+                    else {
+                        var data=JSON.parse(msg);
+                        var uname=data["uname"];
+                        var photo=data["photo"];
+                        $("#uname").html(uname);
+                        $("#photo").html(photo);
+
+                    }
+
+                } ,
+                error: function () {
+                    alert("error");
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript" charset="UTF-8" src="http://js.t.sinajs.cn/t6/webim_prime/js/webim.js?v=1485240372010"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1">
+
+    <link rel="mask-icon" sizes="any" href="http://img.t.sinajs.cn/t6/style/images/apple/wbfont.svg" color="black">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link title="微博" href="http://weibo.com/aj/static/opensearch.xml" type="application/opensearchdescription+xml" rel="search">
+
+    <script type="text/javascript" charset="utf-8" async="" src="http://js.t.sinajs.cn/t5/home/js/common/extra/exposure.js?version=61753de10e0bcca6"></script><script type="text/javascript" charset="utf-8" async="" src="http://js.t.sinajs.cn/open/analytics/js/suda.js?version=61753de10e0bcca6"></script><script type="text/javascript">
+    ~function(l){var h = l.href, r = l.protocol +'//'+ l.host, i = h.indexOf('#!'), s = i != -1 ? h.substr(i + 2) : '';if ( (new RegExp("/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]+", "gi")).test(s) ) l.replace(r + s);}(location)
+</script>
+    <script type="text/javascript">
+        try{document.execCommand("BackgroundImageCache", false, true);}catch(e){}
+    </script>
+    <title>我的粉丝</title>
+    <link putoff="style/css/module/combination/extra.css?version=4e9b92b212b20c09" href="http://img.t.sinajs.cn/t6/style/css/module/base/frame.css?version=4e9b92b212b20c09" type="text/css" rel="stylesheet" charset="utf-8">	<link includes="style/css/module/global/WB_left_nav.css?version=4e9b92b212b20c09|style/css/module/tab/comb_WB_tab_profile.css?version=4e9b92b212b20c09|style/css/module/list/comb_WB_feed.css?version=4e9b92b212b20c09|style/css/apps_PCD/reco/index_right.css?version=4e9b92b212b20c09|style/css/module/global/WB_ad.css?version=4e9b92b212b20c09|style/css/module/global/W_person_info.css?version=4e9b92b212b20c09|style/css/module/global/WB_rm_text_a.css?version=4e9b92b212b20c09|style/css/module/global/WB_rm_text_b.css?version=4e9b92b212b20c09|style/css/module/global/WB_rm_ut_a.css?version=4e9b92b212b20c09|style/css/module/global/WB_rm_ut_b.css?version=4e9b92b212b20c09|style/css/module/list/comb_webim.css?version=4e9b92b212b20c09|style/css/module/pagecard/PCD_pictext_b.css?version=4e9b92b212b20c09|style/css/module/pagecard/PCD_pictext_g.css?version=4e9b92b212b20c09|style/css/apps_PCD/event/PCD_event_redpacks.css?version=4e9b92b212b20c09" href="http://img.t.sinajs.cn/t6/style/css/module/combination/home_A.css?version=4e9b92b212b20c09" type="text/css" rel="stylesheet" charset="utf-8">
+    <style></style><link href="http://img.t.sinajs.cn/t6/style/css/module/combination/extra.css?version=4e9b92b212b20c09" type="text/css" rel="stylesheet"><link rel="Stylesheet" type="text/css" charset="utf-8" href="http://img.t.sinajs.cn/t6/style/css/module/pagecard/PCD_mplayer.css?version=61753de10e0bcca6"><div style="position: absolute; top: -9999px; left: -9999px;"></div><link rel="stylesheet" type="text/css" href="http://img.t.sinajs.cn/t6/style/css/module/pagecard/PCD_connectlist.css?version=0ff33de10b6a7231" id="FM_148524037161035"><div style="position: absolute; top: -9999px;"></div><link rel="stylesheet" type="text/css" href="http://img.t.sinajs.cn/t6/style/css/module/pagecard/PCD_ut_a.css?version=0ff33de10b6a7231" id="FM_148524037161042"><link rel="stylesheet" type="text/css" href="http://img.t.sinajs.cn/t6/style/css/module/pagecard/PCD_text_c.css?version=0ff33de10b6a7231" id="FM_148524037161044"><link rel="stylesheet" type="text/css" charset="utf-8" href="http://img.t.sinajs.cn/t6/skin/skin048/skin.css?version=0ff33de10b6a7231" id="skin_style"><link rel="stylesheet" type="text/css" href="http://img.t.sinajs.cn/t6/style/css/module/pagecard/PCD_text_e.css?version=0ff33de10b6a7231" id="FM_148524037161050"><link rel="stylesheet" type="text/css" href="http://img.t.sinajs.cn/t6/style/css/module/pagecard/PCD_left_nav.css?version=0ff33de10b6a7231" id="FM_148524037161054">
+</head>
+
+<body>
+    <div style="padding: 25px"></div>
+    <div id="plc_main">
+        <div class="WB_frame_b" fixed-box="true" fixed-random="false">
+        <div id="Pl_Core_T4Generaltext__82" anchor="-50"></div>
+        <div id="Pl_Core_Ut1UserList__83" anchor="-50">    <!--HTML 占位-->
+        </div>
+        <div id="Pl_Official_RelationReAddGrp__84" anchor="-50"></div>
+        <div id="Pl_Official_RelationMuteUser__85" anchor="-50"></div>
+        <div id="Pl_Core_T1SingleColumn__86" anchor="-50"></div>
+    </div>
+        <div class="WB_frame_c" fixed-box="true">
+            <div id="Pl_Official_RelationBlacklist__87" anchor="-50"></div>
+            <div id="Pl_Official_RelationFans__88" anchor="-50"><div class="WB_cardwrap S_bg2">
+                <!--列表模块-->
+                <div class="PCD_connectlist">
+                    <div class="WB_innerwrap">
+                        <!--筛选tab-->
+                        <div class="WB_tab_b">
+                            <div class="opt_choose">
+                                <div class="inner S_line2 clearfix">
+                                    <ul class="tab_ul W_fl">
+                                        <!--当前态-->
+                                        <li class="tab_li"><a bpfilter="page" href="/5581533084/fans?pids=Pl_Official_RelationFans__88&amp;relate=fans&amp;f=1" class="tab_item S_line1 tab_cur"><span class="W_f14 S_txt1">粉丝</span><em class="attach S_txt1" node-type="count">6</em><span class="ani_border S_line1"></span></a></li>
+                                        <!--/当前态-->
+                                        <li class="tab_li" style="display:none;"><a bpfilter="page" href="/5581533084/fans?pids=Pl_Official_RelationFans__88&amp;relate=fans&amp;type=trash" class="tab_item S_line1 "><span class="W_f14 S_txt1">垃圾箱</span><em class="attach S_txt1">2</em><span class="ani_border S_line1"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="opt_bar clearfix" style="">
+                                <div class="W_fl">
+                                    <a href="javascript:void(0);" node-type="fan_target" class="btn_link S_txt1">
+                                        排序                                                                                        <em class="W_ficon ficon_arrow_down_lite S_ficon">g</em>
+                                    </a>
+                                    <div class="layer_menu_list" style="z-index:100;position:absolute;display:none;" node-type="fans_layer">
+                                        <ul>
+                                            <li class="cur"><a bpfilter="page" href="/5581533084/fans?pids=Pl_Official_RelationFans__88&amp;relate=fans&amp;f=1">全部关注</a></li>
+                                            <li><a bpfilter="page" href="/5581533084/fans?pids=Pl_Official_RelationFans__88&amp;relate=fans&amp;f=2">互相关注</a></li>
+                                            <li><a bpfilter="page" href="/5581533084/fans?pids=Pl_Official_RelationFans__88&amp;relate=fans&amp;f=3">我未关注</a></li>
+                                            <li class="line"></li>
+                                        </ul>
+                                        <ul>
+                                            <li class="cur"><a bpfilter="page" href="/5581533084/fans?pids=Pl_Official_RelationFans__88&amp;relate=fans&amp;t=1">按关注时间排序</a></li>
+                                            <li><a bpfilter="page" href="/5581533084/fans?pids=Pl_Official_RelationFans__88&amp;relate=fans&amp;t=4">按最近联系人排序</a></li>
+                                            <li><a bpfilter="page" href="/5581533084/fans?pids=Pl_Official_RelationFans__88&amp;relate=fans&amp;t=5">按粉丝数排序</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="W_fr" node-type="search">
+                                    <div class="search_box">
+                                        <span class="WB_search_s"><input value="输入昵称或备注" class="W_input" node-type="addUser_input" notice="输入昵称或备注" autocomplete="off" type="text"><span class="pos"><a href="javascript:void(0);" node-type="submit" title="搜索" class="W_ficon ficon_search S_ficon">f</a></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/筛选tab-->
+                        <!--粉丝列表-->
+                        <div class="follow_box">
+                            <div class="follow_inner">
+                                <ul class="follow_list">
+                                    <li class="follow_item S_line2" node-type="userItem">
+                                        <dl class="clearfix">
+                                            <dt class="mod_pic">
+                                                <a target="_blank" title="lived" href="/u/5535431148?refer_flag=1005050005_">
+                                                    <img usercard="id=5535431148&amp;refer_flag=1005050005_" alt="丿lived" id="photo" src="http://tva2.sinaimg.cn/crop.0.0.1002.1002.50/0062C6vyjw8f89r2w8bftj30ru0rvgmx.jpg" width="50" height="50">
+                                                </a>
+                                            </dt>
+                                            <dd class="mod_info S_line1">
+                                                <div class="info_name W_fb W_f14">
+                                                    <a target="_blank" usercard="id=5535431148&amp;refer_flag=1005050005_" title="丿lived" alt="丿lived" href="myinfo.html" id="uname" class="S_txt1">丿lived</a>
+
+                                                    <a><i class="W_icon icon_male"></i></a>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="follow_item S_line2" node-type="userItem">
+                                        <dl class="clearfix">
+                                            <dt class="mod_pic">
+                                                <a target="_blank" title="胸前戴朵大红花咿呀咿呀哎" href="/u/1118861445?refer_flag=1005050005_">
+                                                    <img usercard="id=1118861445&amp;refer_flag=1005050005_" alt="胸前戴朵大红花咿呀咿呀哎" src="http://tva3.sinaimg.cn/crop.0.0.1002.1002.50/42b07885jw8ezvu1qjc2vj20ru0rudhx.jpg" width="50" height="50">
+                                                </a>
+                                            </dt>
+                                            <dd class="mod_info S_line1">
+                                                <div class="info_name W_fb W_f14">
+                                                    <a target="_blank" usercard="id=1118861445&amp;refer_flag=1005050005_" title="胸前戴朵大红花咿呀咿呀哎" alt="胸前戴朵大红花咿呀咿呀哎" href="myinfo.html" class="S_txt1">胸前戴朵大红花咿呀咿呀哎</a>
+
+                                                    <a><i class="W_icon icon_female"></i></a>                                   	                                        </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="follow_item S_line2" node-type="userItem">
+                                        <dl class="clearfix">
+                                            <dt class="mod_pic">
+                                                <a target="_blank" title="李小小_lxx" href="/u/1825812467?refer_flag=1005050005_">
+                                                    <img usercard="id=1825812467&amp;refer_flag=1005050005_" alt="李小小_lxx" src="http://tva2.sinaimg.cn/crop.0.0.180.180.50/6cd3aff3jw1e8qgp5bmzyj2050050aa8.jpg" width="50" height="50">
+                                                </a>
+                                            </dt>
+                                            <dd class="mod_info S_line1">
+                                                <div class="info_name W_fb W_f14">
+                                                    <a target="_blank" usercard="id=1825812467&amp;refer_flag=1005050005_" title="李小小_lxx" alt="李小小_lxx" href="myinfo.html" class="S_txt1">李小小_lxx</a>
+
+                                                    <a><i class="W_icon icon_female"></i></a>                                   	                                        </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="follow_item S_line2" node-type="userItem">
+                                        <dl class="clearfix">
+                                            <dt class="mod_pic">
+                                                <a target="_blank" title="_RoRo_to" href="/u/3019536073?refer_flag=1005050005_">
+                                                    <img usercard="id=3019536073&amp;refer_flag=1005050005_" alt="_RoRo_to" src="http://tva4.sinaimg.cn/crop.24.0.1194.1194.50/b3fa76c9jw8fbaf2hto84j20yi0x6go6.jpg" width="50" height="50">
+                                                </a>
+                                            </dt>
+                                            <dd class="mod_info S_line1">
+                                                <div class="info_name W_fb W_f14">
+                                                    <a target="_blank" usercard="id=3019536073&amp;refer_flag=1005050005_" title="_RoRo_to" alt="_RoRo_to" href="myinfo.html" class="S_txt1">_RoRo_to</a>
+
+                                                    <a><i class="W_icon icon_female"></i></a>                                   	                                        </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="follow_item S_line2" node-type="userItem">
+                                        <dl class="clearfix">
+                                            <dt class="mod_pic">
+                                                <a target="_blank" title="ZHONGKAIQ" href="/u/3130483755?refer_flag=1005050005_">
+                                                    <img usercard="id=3130483755&amp;refer_flag=1005050005_" alt="ZHONGKAIQ" src="http://tva2.sinaimg.cn/crop.0.0.664.664.50/ba97642bjw8f7ur8kww8ej20ig0ig0tu.jpg" width="50" height="50">
+                                                </a>
+                                            </dt>
+                                            <dd class="mod_info S_line1">
+                                                <div class="info_name W_fb W_f14">
+                                                    <a target="_blank" usercard="id=3130483755&amp;refer_flag=1005050005_" title="ZHONGKAIQ" alt="ZHONGKAIQ" href="/u/3130483755?refer_flag=1005050005_" class="S_txt1">ZHONGKAIQ</a>
+
+                                                    <a><i class="W_icon icon_female"></i></a>                                   	                                        </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="follow_item S_line2" node-type="userItem">
+                                        <dl class="clearfix">
+                                            <dt class="mod_pic">
+                                                <a target="_blank" title="YY霖灵" href="/u/5234675721?refer_flag=1005050005_">
+                                                    <img usercard="id=5234675721&amp;refer_flag=1005050005_" alt="YY霖灵" src="http://tva2.sinaimg.cn/crop.0.0.996.996.50/005Igahzjw8fb3icb188xj30ro0rpq55.jpg" width="50" height="50">
+                                                </a>
+                                            </dt>
+                                            <dd class="mod_info S_line1">
+                                                <div class="info_name W_fb W_f14">
+                                                    <a target="_blank" usercard="id=5234675721&amp;refer_flag=1005050005_" title="YY霖灵" alt="YY霖灵" href="myinfo.html" class="S_txt1">YY霖灵</a>
+
+                                                    <a><i class="W_icon icon_female"></i></a>                                   	                                        </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+
+                                <div class="W_tips tips_warn clearfix">
+                                    <p class="icon"><span class="W_icon icon_warnS"></span></p><p class="txt">智能反垃圾系统自动清除了部分广告用户，如有疑问请点击<a href="http://help.weibo.com/faq/q/417/14042#14042">这里</a>查看。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/粉丝列表-->
+                    </div>
+                </div>
+                <!--/列表模块-->
+            </div>
+            </div>
+            <div id="Pl_Official_RelationIntelligentGroup__89" anchor="-50"></div>
+            <div id="Pl_Official_RelationManageInterested__90" anchor="-50"></div>
+            <div id="Pl_Official_RelationSilentFollow__91" anchor="-50">
+            </div>
+            <div id="Pl_Official_RelationSubscription__92" anchor="-50"></div>
+            <div id="Pl_Official_RelationMyfollow__93" anchor="-50"></div>
+            <div id="Pl_Official_RelationMyRecomm__94" anchor="-50"></div>
+            <div id="Pl_Official_RelationInterested__95" anchor="-50"></div>
+            <div id="Pl_Official_RelationGroupList__96" anchor="-50"></div>
+            <div id="Pl_Official_RelationQuietuser__97" anchor="-50"></div>
+        </div>
+    </div>
+</body>
+</html>
