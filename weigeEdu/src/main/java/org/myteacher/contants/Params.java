@@ -10,7 +10,7 @@ public class Params {
     public static final String MEMORY = "Memory";
 
     //netty后台参数
-    public static String NETTY_ADDRESS = "127.0.0.1";
+    public static String NETTY_ADDRESSADDPORT = "http://127.0.0.1:30000";
     public static int NETTY_PORT = 30000;
 
     //编码格式
